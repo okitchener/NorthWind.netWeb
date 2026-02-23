@@ -1,0 +1,19 @@
+{
+    "Data": {
+        "NorthWind": {
+            "ConnectionString": "Server=bitsql.wctc.edu;Database=NW_##_XXX;User ID=##;Password=##"
+        }
+    },
+    "_comment": {
+        "##": "last 2 digits of CRN",
+        "XXX": "your initials"
+    },
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft": "Warning",
+            "Microsoft.Hosting.Lifetime": "Information"
+        }
+    },
+    "AllowedHosts": "*"
+}
