@@ -3,8 +3,9 @@
 
 <h2>Categories</h2>
 <ul>
+    <!--Category name and description -->
     @foreach (Category category in Model)
     {
-        <li>@category.CategoryName</li>
+        <li>@category.CategoryName - @category.Description</li>
     }
 </ul>
