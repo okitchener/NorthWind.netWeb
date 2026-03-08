@@ -2,10 +2,14 @@
 @model IEnumerable<Category>
 
 <h2>Categories</h2>
-<ul>
+<ul class="list-group">
     <!--Category name and description -->
     @foreach (Category category in Model)
     {
-        <li>@category.CategoryName - @category.Description</li>
+        <li class="list-group-item">
+            <a class="text-decoration-none" href="@Url.Action("Index", "Product", new { id = category.CategoryId })">
+                @category.CategoryName - @category.Description
+            </a>
+        </li>
     }
 </ul>
