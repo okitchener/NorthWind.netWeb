@@ -1,0 +1,13 @@
+@model IEnumerable<Discount>
+
+<h2>Current Discounts</h2>
+<ul class="list-group">
+  @foreach (Discount d in Model)
+  {
+    <li class="list-group-item">
+      <b>@d.Title</b> - @d.Product.ProductName - @d.DiscountPercent.ToString("P0") off
+      <br />
+      <small>@d.StartTime.ToString("d") - @d.EndTime.ToString("d")</small>
+    </li>
+  }
+</ul>

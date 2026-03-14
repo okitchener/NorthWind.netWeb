@@ -31,6 +31,16 @@ namespace Northwind.Controllers
 
             return View(products);
         }
+
+        public IActionResult Discounts()
+        {
+            DateTime today = DateTime.Today;
+            List<Discount> discounts = _dataContext.Discounts
+                .Include(d => d.Product)
+                .Where(d => d.StartTime <= today && d.EndTime >= today)
+                .ToList();
+            return View(discounts);
+        }
     }
 
 }
