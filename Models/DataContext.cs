@@ -7,4 +7,12 @@ public class DataContext : DbContext
   public DbSet<Product> Products { get; set; }
   public DbSet<Category> Categories { get; set; }
   public DbSet<Discount> Discounts { get; set; }
+  public DbSet<Customer> Customers { get; set; }
+
+  public void AddCustomer(Customer customer)
+  {
+    customer.CompanyName = customer.CompanyName?.Trim();
+    Customers.Add(customer);
+    SaveChanges();
+  }
 }
